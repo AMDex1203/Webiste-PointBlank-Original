@@ -1,0 +1,854 @@
+/* attendance_old */
+.attend_all {background: #0e090b url(/images/attend/att_bg.jpg) no-repeat center top;}
+.attend_all .sub_wrap_spring { background: url(/images/bg_wrap_spring.png) no-repeat center top; background-size:cover; }
+.attend_all .sub_wrap_summer { background: url(/images/bg_wrap_summer.png) no-repeat center top; background-size:cover; }
+.attend_all .sub_wrap_fall { background: url(/images/bg_wrap_fall.png) no-repeat center top; background-size:cover; }
+.attend_all .sub_wrap_winter { background: url(/images/bg_wrap_winter.png) no-repeat center top; background-size:cover; }
+.attend_all h2 {padding-bottom:8rem; padding-top:2rem;  }
+.attend_all .cal_wrap { background:#000; padding:1px 1px 0 1px; }
+.attend_all .cal_wrap .date { height:114px; }
+.attend_all .cal_wrap .date ul { position:relative; top:0; height:35px; font-weight:500; width:100%; font-size:3rem; color:#fff; z-index:99; }
+.attend_all .cal_wrap .date li {  position:relative; top:0; margin-top:40px; display:inline-block; padding:0 10px; height:35px; }
+.attend_all .cal_wrap .date li a { font-size:0; width:30px; height:35px; display:block; cursor: pointer; transition: auto; }
+.attend_all .cal_wrap .date li.btn_prev { top:-30px; }
+.attend_all .cal_wrap .date li.btn_prev a { background: url(/images/btn_attendance_prev.png)  no-repeat; z-index:100; }
+.attend_all .cal_wrap .date li.btn_prev a:hover { background: url(/images/btn_attendance_prev.png) 0 -36px  no-repeat;  }
+.attend_all .cal_wrap .date li.btn_next {  top:-30px; }
+.attend_all .cal_wrap .date li.btn_next a { background: url(/images/btn_attendance_next.png)  no-repeat;  }
+.attend_all .cal_wrap .date li.btn_next a:hover { background: url(/images/btn_attendance_next.png) 0 -36px  no-repeat; }
+.attend_all .cal_wrap .list li .con .state {padding:1px; background:#000; height:71px; position:relative; background-size:cover !important;}
+.attend_all .cal_wrap .list li .con .state:before {content:''; display:block; position:absolute; width:68px; height:48px; left:50%; margin-left:-34px; top:13px; background: url(/images/icon_attend.png) 0 0 no-repeat;}
+.attend_all .cal_wrap .list li.bin .con .day {background:none; border-bottom:0; font-size:0;}
+.attend_all .cal_wrap .list li.bin .con .state {background:none;}
+.attend_all .cal_wrap .list li.bin .con .state:before {display:none;}
+.attend_all .cal_wrap .list li.bin .con {border:none;}
+.attend_all .sub_wrap_spring .cal_wrap { border:1px solid #4d6648; }
+.attend_all .sub_wrap_spring .cal_wrap .date { background: url(/images/attend_tit_spring.jpg) 0 center repeat; border-bottom:1px solid #4d6648;}
+.attend_all .sub_wrap_spring .cal_wrap .date span { color:#ffee00;}
+.attend_all .sub_wrap_spring .cal_wrap .list { font-size:0; padding:1px 1px 0 1px; margin-left:-2px; text-align:left;}
+.attend_all .sub_wrap_spring .cal_wrap .list li { width:14.28%; display:inline-block; padding-left:2px; margin:1px 0; vertical-align:top;}
+.attend_all .sub_wrap_spring .cal_wrap .list li .con { height:108px; border:1px solid #4d6648; text-align:center;}
+.attend_all .sub_wrap_spring .cal_wrap .list li .con .day { color:#a0dfbb; font-size:1.4rem; height:34px; line-height:34px; background:linear-gradient(to top,rgba(77,102,72,0.8),black); border-bottom:1px solid #4d6648;}
+.attend_all .sub_wrap_summer .cal_wrap { border:1px solid #224963; }
+.attend_all .sub_wrap_summer .cal_wrap .date { background: url(/images/attend_tit_summer.jpg) 0 center repeat; border-bottom:1px solid #224963;}
+.attend_all .sub_wrap_summer .cal_wrap .date span { color:#ffee00;}
+.attend_all .sub_wrap_summer .cal_wrap .list { font-size:0; padding:1px 1px 0 1px; margin-left:-2px; text-align:left;}
+.attend_all .sub_wrap_summer .cal_wrap .list li { width:14.28%; display:inline-block; padding-left:2px; margin:1px 0; vertical-align:top;}
+.attend_all .sub_wrap_summer .cal_wrap .list li .con { height:108px; border:1px solid #224963; text-align:center;}
+.attend_all .sub_wrap_summer .cal_wrap .list li .con .day { color:#99bbff; font-size:1.4rem; height:34px; line-height:34px; background:linear-gradient(to top,rgba(2,25,57),black); border-bottom:1px solid #2a3950;}
+.attend_all .sub_wrap_fall .cal_wrap { border:1px solid #937e5f; }
+.attend_all .sub_wrap_fall .cal_wrap .date { background: url(/images/attend_tit_fall.jpg) 0 center repeat; border-bottom:1px solid #937e5f; }
+.attend_all .sub_wrap_fall .cal_wrap .date span { color:#ffee00;}
+.attend_all .sub_wrap_fall .cal_wrap .list { font-size:0; padding:1px 1px 0 1px; margin-left:-2px; text-align:left;}
+.attend_all .sub_wrap_fall .cal_wrap .list li { width:14.28%; display:inline-block; padding-left:2px; margin:1px 0; vertical-align:top;}
+.attend_all .sub_wrap_fall .cal_wrap .list li .con { height:108px; border:1px solid #937e5f; text-align:center;}
+.attend_all .sub_wrap_fall .cal_wrap .list li .con .day { color:#d5b990; font-size:1.4rem; height:34px; line-height:34px;  background:linear-gradient(to top,rgba(77,62,42),black); border-bottom:1px solid #937e5f;}
+.attend_all .sub_wrap_winter .cal_wrap { border:1px solid rgba(138,205,233,0.7); }
+.attend_all .sub_wrap_winter .cal_wrap .date { background: url(/images/attend_tit_winter.jpg) 0 center repeat; border-bottom:1px solid rgba(138,205,233,0.7); }
+.attend_all .sub_wrap_winter .cal_wrap .date span { color:#ffee00;}
+.attend_all .sub_wrap_winter .cal_wrap .list { font-size:0; padding:1px 1px 0 1px; margin-left:-2px; text-align:left;}
+.attend_all .sub_wrap_winter .cal_wrap .list li { width:14.28%; display:inline-block; padding-left:2px; margin:1px 0; vertical-align:top;}
+.attend_all .sub_wrap_winter .cal_wrap .list li .con { height:108px; border:1px solid  rgba(138,205,233,0.7); text-align:center;}
+.attend_all .sub_wrap_winter .cal_wrap .list li .con .day { color:#dedede; font-size:1.4rem; height:34px; line-height:34px;  background:linear-gradient(to top,rgba(83,103,111),black); border-bottom:1px solid  rgba(185,209,220,0.6);}
+.attend_all .cal_wrap .list li.pass .con .state { }
+.attend_all .cal_wrap .list li.pass .con .state:before {width:50px; height:50px; margin-left:-25px; background: url(/images/icon_attend_pass.png) 0 0 no-repeat;}
+.attend_all .cal_wrap .list li.ok .con .state { background:#000; }
+.attend_all .cal_wrap .list li.ok .con .state:before {width:50px; height:50px; margin-left:-25px; background: url(/images/icon_attend_check.png) 0 0 no-repeat;}
+.attend_all .cal_wrap .list li.today .con .state { background:#000;}
+.attend_all .cal_wrap .list li.today .con .state:before { background: url(/images/icon_attend_today.png) 0 0 no-repeat;}
+.attend_all .cal_wrap .list li.today .con .day { background: url(/images/attend_date_today.jpg) 0 0 repeat; border-bottom:1px solid #198800; color:#2dff00;}
+.attend_all .cal_wrap .list li.today .con { border:1px solid #2dff00; border-style: dashed; }
+.attend_all .cal_wrap .list li.premium_pass:before {  }
+.attend_all .cal_wrap .list li.premium_pass .con { border:1px #dbdbdb solid;  }
+.attend_all .cal_wrap .list li.premium_pass .con .state:before { width:98px; height:70px; margin-left:-49px; top:1px; background: url(/images/icon_attend_pass_premium.png) center -25px no-repeat;}
+.attend_all .cal_wrap .list li.premium_ok .con { border:1px #fcff00 solid; }
+.attend_all .cal_wrap .list li.premium_ok .con .state:before { width:98px; height:70px; margin-left:-49px; top:1px; background: url(/images/icon_attend_check_premium.png) center -25px no-repeat;}
+.attend_all .cal_wrap .list li.premium_today_ok .con { border:1px #2dff00 solid; border-style: dashed; }
+.attend_all .cal_wrap .list li.premium_today_ok .con .state:before { width:98px; height:70px; margin-left:-49px; top:1px; background: url(/images/icon_attend_check_premium.png) center -25px no-repeat;}
+.attend_all .cal_wrap .list li.today_ok .con { border:1px #2dff00 solid; border-style: dashed; }
+.attend_all .cal_wrap .list li.today_ok .con .state:before {width:50px; height:50px; margin-left:-25px; background: url(/images/icon_attend_check.png) 0 0 no-repeat;}
+
+/* attendance_old (reset) */
+.attend_all_v2 .cal_wrap {padding: 0; background: none;}
+.attend_all_v2 .cal_wrap .list li .con .state {height: auto; padding: 0; background: none; position: static; background-size: auto;}
+.attend_all_v2 .cal_wrap .list li .con .state:before {content:''; width: auto; height: auto; margin-left: 0; display: none; position: static; left: 0; top: 0; background: none;}
+.attend_all_v2 .cal_wrap .list li.today .con {border: none;}
+.attend_all_v2 .cal_wrap .list li.today .con .day {color: #fff; border-bottom: none; background: none;}
+.attend_all_v2 .cal_wrap .list li.today .con .state {background: none;}
+.attend_all_v2 .cal_wrap .list li.ok .con .state {background: none;}
+/* attendance_old (reset) */
+
+/* attendance : default */
+.attend_all_v2 {color: #fff; background-color: #0e090b; background-image: url(/images/attend/att_bg.jpg); background-repeat: no-repeat; background-position: 50% 0; background-size: cover;}
+.attend_all_v2 h2 {margin-bottom: -48px; padding: 1.6rem 0 7.6rem;}
+
+.attend_all_v2 .date {text-align: left;}
+.attend_all_v2 .date a {color: #fff; text-align: center;}
+.attend_all_v2 .date .year {color: #fff; font-weight: 500; display: inline-block; position: relative; top: 0;}
+.attend_all_v2 .date .year .years {height: 48px; padding: 0 50px 0 12px; font-size: 2.1rem; line-height: 48px; letter-spacing: 0.08rem; background: url(/images/attend/att_select.png) no-repeat right 50%; position: relative;}
+.attend_all_v2 .date .year .layer_years {min-width: 276px; padding-top: 48px; background-color: rgba(119, 119, 119, 0.4); box-shadow: 0 24px 48px 0px rgba(0, 0, 0, 0.5); display: none; position: absolute; top: 0; left: 0; z-index: 2;}
+.attend_all_v2 .date .year .layer_years .years {padding-left: 24px; background-color: #777; position: absolute; top: 0; left: 0;}
+.attend_all_v2 .date .year .layer_years .btn_close {width: 24px; height: 24px; font-size: 0; text-indent: -99999px; background: url(/images/attend/att_btn_close.png) no-repeat 50%; position: absolute; top: 12px; right: 12px; opacity: 0.5;}
+.attend_all_v2 .date .year .layer_years .btn_close:hover {opacity: 1;}
+.attend_all_v2 .date .year .layer_years ul {padding: 18px; background: #777;}
+.attend_all_v2 .date .year .layer_years li {width: 108px; height: 48px; margin: 6px; display: inline-block;}
+.attend_all_v2 .date .year .layer_years li a {width: 100%; font-size: 1.7rem; color: #fff; letter-spacing: 0.02rem; line-height: 48px; text-align: center; border: 1px solid #fff;}
+.attend_all_v2 .date .year .layer_years li a:hover {border-color: #000; background: #000;}
+.attend_all_v2 .date .year:hover .years {padding-left: 24px; background-color: #777;}
+.attend_all_v2 .date .month {width: 100%; margin-bottom: 24px;}
+.attend_all_v2 .date .month li {width: calc(100% / 12); padding-right: 1px; display: inline-block;}
+.attend_all_v2 .date .month li:last-child {padding-right: 0;}
+.attend_all_v2 .date .month li a {width: 100%; height: 100%; padding: 56px 0 23px; font-size: 1.35rem; letter-spacing: 0.06rem; font-weight: 500; border-top: 1px solid rgba(255, 255, 255, 0); background-color: rgba(255, 255, 255, 0.1); position: relative;}
+.attend_all_v2 .date .month li a::before {content:''; width: 24px; height: 24px; background-image: url(/images/attend/att_rate_ing.png); background-repeat: no-repeat; background-position: 50% 0; display: block; position: absolute; left: 50%; top: 23px; transform: translate(-50%, 0);}
+.attend_all_v2 .date .month .att a {border-top-color: rgba(255, 255, 255, 0.2);}
+.attend_all_v2 .date .month .att a:hover {border-top-color: rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.2);}
+.attend_all_v2 .date .month .att a::before {background-image: url(/images/attend/att_rate.png);}
+.attend_all_v2 .date .month .att.none a::before {background-position: 50% 0;}
+.attend_all_v2 .date .month .att.per20 a::before {background-position: 50% -24px;}
+.attend_all_v2 .date .month .att.per40 a::before {background-position: 50% -48px;}
+.attend_all_v2 .date .month .att.per60 a::before {background-position: 50% -72px;}
+.attend_all_v2 .date .month .att.per80 a::before {background-position: 50% -96px;}
+.attend_all_v2 .date .month .att.per100 a::before {background-position: 50% -120px;}
+.attend_all_v2 .date .month .on a, .attend_all_v2 .date .month .on a:hover {border-top-color: rgba(45, 153, 210, 1); background: #257; background: linear-gradient(to bottom, #257, #2a66a1);}
+
+.attend_all_v2 .attend_wrap {width: 100%; font-family: 'Roboto'; background: rgba(255, 255, 255, 0.1); display: flex; flex: 1;}
+.attend_all_v2 .attend_wrap .monthly {width: 16.75%; max-width: 240px; background: #234;}
+.attend_all_v2 .attend_wrap .monthly .rate {height: 240px; background: #068; background: linear-gradient(to bottom, #068, #37c); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); position: relative;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress {margin-top: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.attend_all_v2 .attend_wrap .monthly .rate .progress > div {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value {animation: circle_chart_appear 2s;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .num {padding-left: 4px; font-size: 4.45rem; line-height: 4.2rem; letter-spacing: -0.04rem; font-weight: 900;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .days {font-size: 1.5rem; color: #9df; letter-spacing: 0.04rem; font-family: 'Oswald';}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .days span {color: #fff;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart {width: 180px; height: 180px;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: rgba(255, 255, 255, 0.1); stroke-width: 4; fill: none;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #fff; stroke-width: 4; fill: none; stroke-linecap: square; animation: circle_chart_fill 2s reverse; transform: rotate(-90deg); transform-origin: center;}
+
+@keyframes circle_chart_fill {to {stroke-dasharray: 0 100;}}
+@keyframes circle_chart_appear {from {opacity: 0;} to {opacity: 1;}}
+
+.attend_all_v2 .attend_wrap .monthly .att_stats {padding: 12px 24px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li {padding: 0 10px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li::before {content:''; width: calc(100% - 2px); height: 12px; border: 1px solid #567; border-top: none; display: block; position: absolute; left: 0; bottom: 0;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li > p {height: 60px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats .num {font-size: 1.6rem; font-weight: 700;}
+
+.attend_all_v2 .attend_wrap .att_stats li {width: 100%; text-align: left; display: table; position: relative;}
+.attend_all_v2 .attend_wrap .att_stats li > p {display: table-cell; vertical-align: middle;}
+.attend_all_v2 .attend_wrap .att_stats .stit {width: 60%; padding: 0 0 2px 18px; font-size: 1.1rem; color: #aaccdf; letter-spacing: 0.04rem; font-family: 'Oswald'; position: relative;}
+.attend_all_v2 .attend_wrap .att_stats .stit .icon {width: 12px; height: 12px; margin-top: -6px; background-repeat: no-repeat; background-position: 50% 0; display: inline-block; position: absolute; top: 50%; left: 0; opacity: 0.5;}
+.attend_all_v2 .attend_wrap .att_stats .battle .stit .icon {background-image: url(/images/attend/att_ic_wt_battle.png);}
+.attend_all_v2 .attend_wrap .att_stats .kill .stit .icon {background-image: url(/images/attend/att_ic_wt_kill.png);}
+.attend_all_v2 .attend_wrap .att_stats .death .stit .icon {background-image: url(/images/attend/att_ic_wt_death.png);}
+.attend_all_v2 .attend_wrap .att_stats .headshot .stit .icon {background-image: url(/images/attend/att_ic_wt_headshot.png);}
+.attend_all_v2 .attend_wrap .att_stats .time .stit .icon {background-image: url(/images/attend/att_ic_wt_time.png);}
+.attend_all_v2 .attend_wrap .att_stats .num {width: 40%; font-size: 1.2rem; text-align: right;}
+.attend_all_v2 .attend_wrap .att_stats .txt {font-size: 1.1rem; font-family: 'Oswald'; text-align: center;}
+.attend_all_v2 .attend_wrap .att_stats .attend {font-size: 1.2rem; font-family: 'Oswald'; text-align: center;}
+
+.attend_all_v2 .attend_wrap .cal_wrap {width: 83.25%; padding: 18px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list {text-align: left; display: flex; flex: 1; flex-wrap: wrap;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li {width: calc((100% / 7) - 12px); min-height: 168px; margin: 6px; padding: 11px 14px 13px; border-radius: 4px; background: rgba(57, 68, 75, 0.5); position: relative;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .day {margin-bottom: 5px; font-size: 1.4rem; color: #aaccdf;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {content:''; width: 100%; height: 1px; border-bottom: 1px solid #567; display: block; position: absolute; bottom: 0; left: 0; opacity: 0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li > p {height: 24px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats .num {padding-right: 2px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.pass {border: 1px solid #526272; background: none;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.ok {border: 1px solid #526272; border-left: none; border-right: none; background: #39444b;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today {padding-left: 13px; padding-right: 13px; border: 1px solid #3f0; background: #000;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con {height: calc(100% - 34px);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .day {color: #3f0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state {height: 100%;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #3f0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #3f0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .stit .icon {opacity: 1;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_gr_battle.png);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_gr_kill.png);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_gr_death.png);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_gr_headshot.png);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_gr_time.png);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt {height: 100%; margin-top: 11px; padding-top: 59px; font-size: 1.2rem; color: #3f0; line-height: 1.6rem; letter-spacing: 0.04rem; text-align: center; font-family: 'Oswald'; border-radius: 4px; background-color: rgba(51, 255, 0, 0.2); background-image: url(/images/attend/att_absence_gr.png); background-repeat: no-repeat; background-position: 50% 16px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt font {display: block;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none; position: relative;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #3f0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::before, .attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::after {content:''; width: 36px; height: 36px; margin-left: -18px; display: block; position: absolute; top: 16px; left: 50%;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg.png); animation: attend_img 4s infinite steps(20);}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc.png); animation: attend_spin 2s infinite ease-out;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #eaa;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #3f0;}
+
+@keyframes attend_img {from {background-position: 50% 0;} to {background-position: 50% -720px;}}
+@keyframes attend_spin {20% {transform: rotate(0deg);} 60% {transform: rotate(360deg);} 80% {transform: rotate(320deg);} 100% {transform: rotate(360deg);}}
+
+/* attendance : attend_style_ex (example) */
+.attend_all_v2 .attend_style_ex {background-color: #000; background-image: url(/images/attend/att_bg_concept.jpg);} /* bg-img : att_bg_(concept).jpg */
+.attend_all_v2 .attend_style_ex .date .year .layer_years {background: rgba(85, 85, 187, 0.5);}
+.attend_all_v2 .attend_style_ex .date .year .layer_years .years {background-color: #55b;}
+.attend_all_v2 .attend_style_ex .date .year .layer_years ul {background: #55b; box-shadow: 12px 0px 48px 0px rgba(0, 0, 0, 0.5);}
+.attend_all_v2 .attend_style_ex .date .year .layer_years li a {color: #aaf; border: 1px solid #99f;}
+.attend_all_v2 .attend_style_ex .date .year .layer_years li a:hover {color: #fe0; border-color: #003; background: #003;}
+.attend_all_v2 .attend_style_ex .date .year:hover .years {background-color: #55b;}
+.attend_all_v2 .attend_style_ex .date .month li a {border-top: 1px solid rgba(85, 85, 187, 0); background: #115;}
+.attend_all_v2 .attend_style_ex .date .month .att a {border-top-color: rgba(85, 85, 187, 0.5);}
+.attend_all_v2 .attend_style_ex .date .month .att a:hover {border-top-color: rgba(85, 85, 187, 1); background-color: #228;}
+.attend_all_v2 .attend_style_ex .date .month .on a, .attend_all_v2 .attend_style_ex .date .month .on a:hover {border-top-color: #77c; background: #33a; background: linear-gradient(to bottom, #33a, #44b);}
+.attend_all_v2 .attend_style_ex .attend_wrap {background: rgba(85, 85, 187, 0.3);}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly {background: #115;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate {background: #33a; background: linear-gradient(to bottom, #33a, #44b);}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate .progress .value .num {color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate .progress .value .days {color: #ccf;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate .progress .value .days span {color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #55b;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .monthly .att_stats li::before {border-color: #55b;} /* mobile : media screen max-width 768 */
+.attend_all_v2 .attend_style_ex .attend_wrap .att_stats .stit {color: #ccf;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list > li {background: #336;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list > li .con .day {color: #ccf;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: #55b;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.pass {border-color: rgba(204, 204, 255, 0.4);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.ok {border-color: #66d; background: #339;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: #000;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0.2); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #faa;}
+.attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_ex .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #fe0;}
+
+/*---------------- ID Concept Series ---------------- */
+
+/* attendance : attend_style_jan */
+.attend_all_v2 .attend_style_jan {background-color: #14100f; background-image: url(/images/attend/att_bg_jan.jpg);}
+.attend_all_v2 .attend_style_jan .date .year .layer_years {background: rgba(111, 77, 53, 0.5);}
+.attend_all_v2 .attend_style_jan .date .year .layer_years .years {background-color: #d99244;}
+.attend_all_v2 .attend_style_jan .date .year .layer_years ul {background: #d99244;}
+.attend_all_v2 .attend_style_jan .date .year .layer_years li a {color: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.5);}
+.attend_all_v2 .attend_style_jan .date .year .layer_years li a:hover {color: #fc9; border-color: #000;}
+.attend_all_v2 .attend_style_jan .date .year:hover .years {background-color: #d99244;}
+.attend_all_v2 .attend_style_jan .date .month li a {color: rgba(255, 204, 153, 0.5); border-top: 1px solid rgba(119, 83, 57, 0); background: rgba(119, 83, 57, 0.5);}
+.attend_all_v2 .attend_style_jan .date .month .att a {color: #fc9; border-top-color: #a9805e; background: linear-gradient(to bottom, #775339, #963);}
+.attend_all_v2 .attend_style_jan .date .month .att a:hover {color: #fff; border-top-color: #644e3c; background: linear-gradient(to bottom, #211814, #211814);}
+.attend_all_v2 .attend_style_jan .date .month .on a, .attend_all_v2 .attend_style_jan .date .month .on a:hover {color: #fff; border-top-color: #deb580; background: linear-gradient(to bottom, #b27a3a, #963);}
+.attend_all_v2 .attend_style_jan .attend_wrap {background: rgba(119, 83, 57, 0.4);}
+.attend_all_v2 .attend_style_jan .attend_wrap .monthly {background: #6f4d35;}
+.attend_all_v2 .attend_style_jan .attend_wrap .monthly .rate {background: linear-gradient(to top, #b27a3a, #963);}
+.attend_all_v2 .attend_style_jan .attend_wrap .monthly .rate .progress .value .days {color: #fc9;}
+.attend_all_v2 .attend_style_jan .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #d99244;}
+.attend_all_v2 .attend_style_jan .attend_wrap .monthly .att_stats li::before {border-color: rgba(255, 204, 153, 0.3);}
+.attend_all_v2 .attend_style_jan .attend_wrap .att_stats .stit {color: #fc9;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list > li {background: rgba(33, 24, 20, 0.5);}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list > li .con .day {color: #fc9;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(255, 204, 153, 0.25);}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li.pass {border-color: #826148; border-top-color: #d3a67c;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li.ok {border-color: #d0a278; border-bottom-color: #886347; background: #6f4d35;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li.today {border: 1px solid #3f0; background: #000;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li.today .con .day {color: #3f0;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #3f0;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #f99;}
+.attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_jan .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #3f0;}
+
+/* attendance : attend_style_feb */
+.attend_all_v2 .attend_style_feb {background-color: #19456d; background-image: url(/images/attend/att_bg_feb.jpg);}
+.attend_all_v2 .attend_style_feb .date .year .layer_years {background: rgba(25, 69, 109, 0.5);}
+.attend_all_v2 .attend_style_feb .date .year .layer_years .years {background-color: #15a;}
+.attend_all_v2 .attend_style_feb .date .year .layer_years ul {background: #15a;}
+.attend_all_v2 .attend_style_feb .date .year .layer_years li a {color: rgba(102, 221, 255, 0.6); border: 1px solid rgba(102, 221, 255, 0.6);}
+.attend_all_v2 .attend_style_feb .date .year .layer_years li a:hover {color: #5cf; border-color: #000;}
+.attend_all_v2 .attend_style_feb .date .year:hover .years {background-color: #15a;}
+.attend_all_v2 .attend_style_feb .date .month {box-shadow: 0 20px 36px 0px rgba(0, 0, 0, 0.3);}
+.attend_all_v2 .attend_style_feb .date .month li a {color: #608cca; border-top: 1px solid rgba(22, 71, 143, 0); background: rgba(22, 71, 143, 0.5);}
+.attend_all_v2 .attend_style_feb .date .month .att a {color: #77afff; border-top-color: #39f; background: #224b88;}
+.attend_all_v2 .attend_style_feb .date .month .att a:hover {color: #fff; background: #26c;}
+.attend_all_v2 .attend_style_feb .date .month .on a, .attend_all_v2 .attend_style_feb .date .month .on a:hover {color: #fff; border-top-color: #6df; background: linear-gradient(to bottom, #0bf, #26c);}
+.attend_all_v2 .attend_style_feb .attend_wrap {background: rgba(0, 85, 136, 0.7);}
+.attend_all_v2 .attend_style_feb .attend_wrap .monthly {background: rgba(30, 91, 182, 0.7) url(/images/attend/att_bg_feb_stat.png) no-repeat 50% bottom;}
+.attend_all_v2 .attend_style_feb .attend_wrap .monthly .rate {background: linear-gradient(to top, #0bf, #26c);}
+.attend_all_v2 .attend_style_feb .attend_wrap .monthly .rate .progress .value .days {color: #aef;}
+.attend_all_v2 .attend_style_feb .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #05a;}
+.attend_all_v2 .attend_style_feb .attend_wrap .monthly .att_stats li::before {border-color: rgba(187, 238, 255, 0.3);}
+.attend_all_v2 .attend_style_feb .attend_wrap .att_stats .stit {color: #aef;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list > li {background: linear-gradient(to bottom, rgba(0, 134, 187, 0.5), rgba(47, 160, 244, 0.5));}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list > li .con .day {color: #aef;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list > li .con .state .att_stats .stit {color: #9cf;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(153, 204, 255, 0.3);}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.pass {border-color: #4a84a0; border-bottom-color: #39f;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.ok {border-color: #025; border-bottom-color: #39f; background: linear-gradient(to bottom, #025, #1a4683);}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.today {border: 1px solid #3f0; background: #000;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.today .con .day {color: #3f0;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #3f0;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #3f0;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fbb;}
+.attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_feb .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #3f0;}
+
+/* attendance : attend_style_mar */
+.attend_all_v2 .attend_style_mar {background-color: #462f40; background-image: url(/images/attend/att_bg_mar.jpg);}
+.attend_all_v2 .attend_style_mar .date .year .years {color: #559; background-image: url(/images/attend/att_select_vt.png);}
+.attend_all_v2 .attend_style_mar .date .year .layer_years {background: rgba(170, 119, 119, 0.5); box-shadow: 12px 0px 48px 0px rgba(211, 108, 102, 0.4);}
+.attend_all_v2 .attend_style_mar .date .year .layer_years .years {color: #fff; background-color: #559; background-image: url(/images/attend/att_select.png);}
+.attend_all_v2 .attend_style_mar .date .year .layer_years ul {background: linear-gradient(to bottom, #559, #a77); box-shadow: none;}
+.attend_all_v2 .attend_style_mar .date .year .layer_years li a {color: #fd7; border: 1px solid #fd7;}
+.attend_all_v2 .attend_style_mar .date .year .layer_years li a:hover {color: #fff; border-color: #f88; background: #f88;}
+.attend_all_v2 .attend_style_mar .date .year:hover .years {color: #fff; background-color: #559; background-image: url(/images/attend/att_select.png);}
+.attend_all_v2 .attend_style_mar .date .month li a {color: #fed; font-weight: 400; border-top: 1px solid rgba(119, 102, 170, 0); background: rgba(119, 102, 170, 0.5);}
+.attend_all_v2 .attend_style_mar .date .month .att a {color: #e7e7ff; border-top-color: #625ac4; background: linear-gradient(to bottom, #635f9b, #796cb3);}
+.attend_all_v2 .attend_style_mar .date .month .att a:hover {color: #fff; border-top-color: #786bb2; background: linear-gradient(135deg, #786bb2, #96668c);}
+.attend_all_v2 .attend_style_mar .date .month .on a, .attend_all_v2 .attend_style_mar .date .month .on a:hover {color: #fff; border-top-color: #b19f57; background: linear-gradient(135deg, #aa5, #d36c63);}
+.attend_all_v2 .attend_style_mar .attend_wrap {background: linear-gradient(to bottom, rgba(69, 59, 97, 0.5), rgba(90, 51, 123, 0.5));}
+.attend_all_v2 .attend_style_mar .attend_wrap .monthly {background: rgba(136, 102, 51, 0.8) url(/images/attend/att_ptn_noise3.png) repeat;}
+.attend_all_v2 .attend_style_mar .attend_wrap .monthly .rate {background: linear-gradient(135deg, #aa5, #d36c63); box-shadow: none;}
+.attend_all_v2 .attend_style_mar .attend_wrap .monthly .rate .progress .value .days {color: #fd7;}
+.attend_all_v2 .attend_style_mar .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #fd7;}
+.attend_all_v2 .attend_style_mar .attend_wrap .monthly .att_stats li::before {border-color: rgba(255, 238, 221, 0.3);}
+.attend_all_v2 .attend_style_mar .attend_wrap .att_stats .stit {color: #fda;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list > li {background: rgba(208, 175, 184, 0.3); position: relative;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list > li .con .day {color: #fea;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: #5a689e;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.pass {border-color: #bfa086; border-top-color: #eac97c;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.ok {border-color: #e9cb64; border-bottom-color: #fc9888; background: linear-gradient(to bottom, #32335b, #3d5287);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.ok::before, .attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today::before {content:''; width: 100%; height: 100%; background: url(/images/attend/att_ptn_noise5.png) repeat; display: block; position: absolute; left: 0; top: 0;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: linear-gradient(135deg, #440, #814e29);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0.2); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fcc;}
+.attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_mar .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #fe0;}
+
+/* attendance : attend_style_apr */
+.attend_all_v2 .attend_style_apr {background-color: #001120; background-image: url(/images/attend/att_bg_apr.jpg);}
+.attend_all_v2 .attend_style_apr .date .year .layer_years {background: rgba(25, 69, 109, 0.5);}
+.attend_all_v2 .attend_style_apr .date .year .layer_years .years {background-color: #15a;}
+.attend_all_v2 .attend_style_apr .date .year .layer_years ul {background: #15a;}
+.attend_all_v2 .attend_style_apr .date .year .layer_years li a {color: rgba(102, 221, 255, 0.6); border: 1px solid rgba(102, 221, 255, 0.6);}
+.attend_all_v2 .attend_style_apr .date .year .layer_years li a:hover {color: #5cf; border-color: #000;}
+.attend_all_v2 .attend_style_apr .date .year:hover .years {background-color: #15a;}
+.attend_all_v2 .attend_style_apr .date .month {box-shadow: 0 20px 36px 0px rgba(0, 0, 0, 0.3);}
+.attend_all_v2 .attend_style_apr .date .month li a {color: #608cca; border-top: 1px solid rgba(22, 71, 143, 0); background: rgba(22, 71, 143, 0.5);}
+.attend_all_v2 .attend_style_apr .date .month .att a {color: #77afff; border-top-color: #39f; background: #224b88;}
+.attend_all_v2 .attend_style_apr .date .month .att a:hover {color: #fff; background: #26c;}
+.attend_all_v2 .attend_style_apr .date .month .on a, .attend_all_v2 .attend_style_apr .date .month .on a:hover {color: #fff; border-top-color: #6df; background: linear-gradient(to bottom, #0bf, #26c);}
+.attend_all_v2 .attend_style_apr .attend_wrap {background: rgba(0, 85, 136, 0.7);}
+.attend_all_v2 .attend_style_apr .attend_wrap .monthly {background: rgba(30, 91, 182, 0.7);}
+.attend_all_v2 .attend_style_apr .attend_wrap .monthly .rate {background: linear-gradient(to top, #0bf, #26c);}
+.attend_all_v2 .attend_style_apr .attend_wrap .monthly .rate .progress .value .days {color: #aef;}
+.attend_all_v2 .attend_style_apr .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #05a;}
+.attend_all_v2 .attend_style_apr .attend_wrap .monthly .att_stats li::before {border-color: rgba(187, 238, 255, 0.3);}
+.attend_all_v2 .attend_style_apr .attend_wrap .att_stats .stit {color: #aef;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list > li {background: rgba(0, 134, 187, 0.2); background: linear-gradient(to bottom, rgba(0, 134, 187, 0.2), rgba(47, 160, 244, 0.3));}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list > li .con .day {color: #aef;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list > li .con .state .att_stats .stit {color: #9cf;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(153, 204, 255, 0.3);}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.pass {border-color: #4a84a0; border-bottom-color: #39f;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.ok {border-color: #025; border-bottom-color: #39f; background: #025;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.today {border: 1px solid #3f0; background: #000;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.today .con .day {color: #3f0;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #3f0;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #3f0;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fbb;}
+.attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_apr .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #3f0;}
+
+/* attendance : attend_style_may */
+.attend_all_v2 .attend_style_may {background-color: #001120; background-image: url(/images/attend/att_bg_may.jpg);}
+.attend_all_v2 .attend_style_may .date .year .layer_years {background: rgba(79, 154, 132, 0.5); box-shadow: 0 24px 48px 0px rgba(102, 155, 128, 0.4);}
+.attend_all_v2 .attend_style_may .date .year .layer_years .years {color: #276; background-color: #a6caaf; background-image: url(/images/attend/att_select_gr.png);}
+.attend_all_v2 .attend_style_may .date .year .layer_years ul {background: #a6caaf;}
+.attend_all_v2 .attend_style_may .date .year .layer_years li a {color: #487; border: 1px solid #487;}
+.attend_all_v2 .attend_style_may .date .year .layer_years li a:hover {color: #cfd; border-color: #000;}
+.attend_all_v2 .attend_style_may .date .year:hover .years {color: #276; background-color: #a6caaf; background-image: url(/images/attend/att_select_gr.png);}
+.attend_all_v2 .attend_style_may .date .month li a {color: #accdb3; border-top: 1px solid rgba(113, 149, 117, 0); background: #719575;}
+.attend_all_v2 .attend_style_may .date .month .att a {color: #a4e6e6; border-top-color: #69bdc7; background: linear-gradient(to bottom, #3b8b95, #55a09c);}
+.attend_all_v2 .attend_style_may .date .month .att a:hover {color: #fff; border-top-color: #7cb; background: linear-gradient(to bottom, #358d74, #358d74);}
+.attend_all_v2 .attend_style_may .date .month .on a, .attend_all_v2 .attend_style_may .date .month .on a:hover {color: #fff; border-top-color: #cee4d0; background: #8cae93;}
+.attend_all_v2 .attend_style_may .attend_wrap {background: linear-gradient(to bottom, rgba(156, 194, 163, 0.5), #88ab90);}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly {background: rgba(47, 122, 142, 0.7);}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate {background: linear-gradient(to bottom, #c7ddcb, #a0c7aa); box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 1);}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate .progress .value .num {color: #0e8898;}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate .progress .value .days {color: #68846d;}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate .progress .value .days span {color: #0e8898;}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #0e8898;}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #a0c7aa;}
+.attend_all_v2 .attend_style_may .attend_wrap .monthly .att_stats li::before {border-color: rgba(187, 238, 255, 0.3);}
+.attend_all_v2 .attend_style_may .attend_wrap .att_stats .stit {color: #aef;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list > li {background: rgba(100, 141, 109, 0.5);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list > li .con .day {color: #cfd;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list > li .con .state .att_stats .stit {color: #a4e6e6;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(153, 204, 255, 0.3);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.pass {border-color: rgba(204, 255, 221, 0.5);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.ok {border-color: #36816b; border-bottom-color: #066; background: linear-gradient(to bottom, #36816b, #398890);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today {border-color: #512; background: linear-gradient(to bottom, #311, #512);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .day {color: #e8a;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #e8a;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_pk_battle.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_pk_kill.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_pk_death.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_pk_headshot.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_pk_time.png);} 
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #e8a; background-color: rgba(255, 119, 170, 0.15); background-image: url(/images/attend/att_absence_pk.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #e8a;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_pk.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_pk.png);}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #e8a;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fea;}
+.attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_may .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #e8a;}
+
+/* attendance : attend_style_jun */
+.attend_all_v2 .attend_style_jun {background-color: #001120; background-image: url(/images/attend/att_bg_jun.jpg);}
+.attend_all_v2 .attend_style_jun .date .year .layer_years {background: rgba(153, 0, 0, 0.5);}
+.attend_all_v2 .attend_style_jun .date .year .layer_years .years {background-color: #c00;}
+.attend_all_v2 .attend_style_jun .date .year .layer_years ul {background: #c00;}
+.attend_all_v2 .attend_style_jun .date .year .layer_years li a {color: #f88; border: 1px solid #f88;}
+.attend_all_v2 .attend_style_jun .date .year .layer_years li a:hover {color: #fd0; border-color: #000;}
+.attend_all_v2 .attend_style_jun .date .year:hover .years {background-color: #c00;}
+.attend_all_v2 .attend_style_jun .date .month li a {color: #f66; border-top: 1px solid rgba(255, 0, 0, 0); background: rgba(51, 0, 0, 0.3);}
+.attend_all_v2 .attend_style_jun .date .month .att a {color: #faa; border-top-color: #f00; background: #900;}
+.attend_all_v2 .attend_style_jun .date .month .att a:hover {color: #fff; border-top-color: #d00; background: linear-gradient(to bottom, #500, #700);}
+.attend_all_v2 .attend_style_jun .date .month .on a, .attend_all_v2 .attend_style_jun .date .month .on a:hover {color: #fff; border-top-color: #f00; background: linear-gradient(to bottom, #f00, #c00);}
+.attend_all_v2 .attend_style_jun .attend_wrap {background: rgba(68, 0, 0, 0.7) url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly {background: rgba(170, 0, 0, 0.7) url(/images/attend/att_bg_jun_stat.png) no-repeat;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate {background: #400 url(/images/attend/att_bg_jun_rate.png) no-repeat 50% bottom; background-size: cover; box-shadow: none;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate .progress .value .num {color: #ff0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate .progress .value .days {color: #f33;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate .progress .value .days span {color: #ff0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #fd0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #900;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .att_stats .stit {color: #fe0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .monthly .att_stats li::before {border-color: #fc0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .att_stats .stit {color: #faa;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list > li {background: rgba(204, 0, 0, 0.25);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list > li .con .day {color: #f44;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: #b33;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.pass {border-color: rgba(255, 51, 51, 0.4);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.ok {border-color: #900; border-bottom-color: #f00; background: #900;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.ok .con .day {color: #f66;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: #300 url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0.2); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_jun .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fe0;}
+
+/* attendance : attend_style_jul */
+.attend_all_v2 .attend_style_jul {background-color: #0e4763; background-image: url(/images/attend/att_bg_jul.jpg);}
+.attend_all_v2 .attend_style_jul .date .year .layer_years {background: rgba(0, 204, 136, 0.4);}
+.attend_all_v2 .attend_style_jul .date .year .layer_years .years {background-color: #0c8;}
+.attend_all_v2 .attend_style_jul .date .year .layer_years ul {background: #0c8;}
+.attend_all_v2 .attend_style_jul .date .year .layer_years li a {color: #dff; border: 1px solid #bfe;}
+.attend_all_v2 .attend_style_jul .date .year .layer_years li a:hover {color: #0fa; border-color: #000;}
+.attend_all_v2 .attend_style_jul .date .year:hover .years {background-color: #0c8;}
+.attend_all_v2 .attend_style_jul .date .month li a {color: #5bf; font-weight: 400; border-top: 1px solid rgba(0, 51, 102, 0); background: rgba(0, 51, 102, 0.6);}
+.attend_all_v2 .attend_style_jul .date .month .att a {color: #bff; border-top-color: #69bdc7; background: linear-gradient(to bottom, #1d8f9c, #51bcbd);}
+.attend_all_v2 .attend_style_jul .date .month .att a:hover {color: #fff; border-top-color: #7cb; background: linear-gradient(to bottom, #087, #087);}
+.attend_all_v2 .attend_style_jul .date .month .on a, .attend_all_v2 .attend_style_may .date .month .on a:hover {color: #fff; border-top-color: #b1d136; background: #126f9e;}
+.attend_all_v2 .attend_style_jul .attend_wrap {background: rgba(26, 93, 19, 0.5);}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly {background: linear-gradient(to bottom, rgba(34, 102, 85, 0.7), rgba(22, 111, 173, 0.7));}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate {background: linear-gradient(to bottom, #b9d2bd, #b9d2bd);}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate .progress .value .num {color: #0e8898;}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate .progress .value .days {color: #68846d;}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate .progress .value .days span {color: #0e8898;}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #0e8898;}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #96b99e;}
+.attend_all_v2 .attend_style_jul .attend_wrap .monthly .att_stats li::before {border-color: rgba(170, 238, 255, 0.4);}
+.attend_all_v2 .attend_style_jul .attend_wrap .att_stats .stit {color: #bff;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list > li {background: linear-gradient(to bottom, rgba(34, 153, 102, 0.5), rgba(54, 167, 160, 0.5));}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list > li .con .day {color: #bde3c4;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(187, 255, 255, 0.3);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.pass {border-color: rgba(189, 227, 196, 0.4);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.ok {border-color: #099; border-bottom-color: #0092ad; background: linear-gradient(to bottom, #099, #0092ad);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: #021;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fcc;}
+.attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_jul .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #fe0;}
+
+/* attendance : attend_style_aug */
+.attend_all_v2 .attend_style_aug {background-color: #f3f3f3; background-image: url(/images/attend/att_bg_aug.jpg);}
+.attend_all_v2 .attend_style_aug .date .year .layer_years {background: rgba(153, 68, 102, 0.5);}
+.attend_all_v2 .attend_style_aug .date .year .layer_years .years {background-color: #946;}
+.attend_all_v2 .attend_style_aug .date .year .layer_years ul {background: #946;}
+.attend_all_v2 .attend_style_aug .date .year .layer_years li a {color: #cca2b3; border: 1px solid #cca2b3;}
+.attend_all_v2 .attend_style_aug .date .year .layer_years li a:hover {color: #fff; border-color: #000;}
+.attend_all_v2 .attend_style_aug .date .year:hover .years {background-color: #946;}
+.attend_all_v2 .attend_style_aug .date .month li a {color: #bef; font-weight: 400; border-top: 1px solid rgba(0, 85, 153, 0); background: rgba(0, 85, 153, 0.35);}
+.attend_all_v2 .attend_style_aug .date .month .att a {color: #fdd; border-top-color: #c9746b; background: linear-gradient(to bottom, #c9746b, #c86164);}
+.attend_all_v2 .attend_style_aug .date .month .att a:hover {color: #fff; border-top-color: #b44; background: linear-gradient(to bottom, #b44, #b44);}
+.attend_all_v2 .attend_style_aug .date .month .on a, .attend_all_v2 .attend_style_aug .date .month .on a:hover {color: #479; border-top-color: #fff; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));}
+.attend_all_v2 .attend_style_aug .attend_wrap {background: rgba(255, 170, 136, 0.5) url(/images/attend/att_ptn_noise3.png) repeat;}
+.attend_all_v2 .attend_style_aug .attend_wrap .monthly {background: rgba(170, 51, 51, 0.8) url(/images/attend/att_bg_aug_stat.png) no-repeat 50% bottom;}
+.attend_all_v2 .attend_style_aug .attend_wrap .monthly .rate {background: linear-gradient(to bottom, #ca8372, #d4a091); box-shadow: none;}
+.attend_all_v2 .attend_style_aug .attend_wrap .monthly .rate .progress .value .days {color: #fdc;}
+.attend_all_v2 .attend_style_aug .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #c76;}
+.attend_all_v2 .attend_style_aug .attend_wrap .monthly .att_stats li::before {border-color: rgba(255, 221, 221, 0.25);}
+.attend_all_v2 .attend_style_aug .attend_wrap .att_stats .stit {color: #fdd;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list > li {background: rgba(204, 145, 117, 0.3);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list > li .con .day {color: #8f5a4c;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(255, 221, 221, 0.4);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.pass {border-color: rgba(143, 90, 76, 0.4);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.ok {border-color: #b57766; border-bottom-color: #b56688; background: linear-gradient(to bottom, #b57766, #b56688);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.ok .con .day {color: #fdd;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today {border-color: #5886ab; border-bottom-color: #54a; border-left: none; border-right: none; background: linear-gradient(135deg, #5886ab, #6a74b6);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .day {color: #aef;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #aef;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_sb_battle.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_sb_kill.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_sb_death.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_sb_headshot.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_sb_time.png);} 
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #aef; background-color: rgba(170, 238, 255, 0); background-image: url(/images/attend/att_absence_sb.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #aef;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_sb.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_sb.png);}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #aef;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #c30;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:first-child.ok .con .day, .attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:nth-child(7n+1).ok .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_aug .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #aef;}
+
+/* attendance : attend_style_sep */
+.attend_all_v2 .attend_style_sep {background-color: #e09666; background-image: url(/images/attend/att_bg_sep.jpg);}
+.attend_all_v2 .attend_style_sep .date .year .layer_years {background: rgba(136, 0, 0, 0.4); box-shadow: 0 24px 48px 0px rgba(102, 34, 34, 0.4);}
+.attend_all_v2 .attend_style_sep .date .year .layer_years .years {background-color: #d66;}
+.attend_all_v2 .attend_style_sep .date .year .layer_years ul {background: linear-gradient(to bottom, #d66, #d87f61);}
+.attend_all_v2 .attend_style_sep .date .year .layer_years li a {color: rgba(255, 255, 255, 0.8); border-color: rgba(255, 255, 255, 0.8);}
+.attend_all_v2 .attend_style_sep .date .year .layer_years li a:hover {color: #fcb; border-color: #000;}
+.attend_all_v2 .attend_style_sep .date .year:hover .years {background-color: #d66;}
+.attend_all_v2 .attend_style_sep .date .month li a {color: #fcb; border-top: 1px solid rgba(102, 51, 102, 0); background: rgba(102, 51, 102, 0.4);}
+.attend_all_v2 .attend_style_sep .date .month .att a {color: #fdd; border-top-color: rgba(170, 68, 85, 0.8); background: linear-gradient(to bottom, rgba(170, 68, 85, 0.9), rgba(210, 109, 84, 0.9));}
+.attend_all_v2 .attend_style_sep .date .month .att a:hover {color: #fff; border-top-color: #623; background: linear-gradient(to bottom, #623, #623);}
+.attend_all_v2 .attend_style_sep .date .month .on a, .attend_all_v2 .attend_style_sep .date .month .on a:hover {color: #fff; border-top-color: #11718f; background: linear-gradient(to bottom, #11718f, #636);}
+.attend_all_v2 .attend_style_sep .date .month .on a::after {content:''; width: 100%; height: 100%; background: url(/images/attend/att_ptn_noise5.png) repeat; display: block; position: absolute; left: 0; top: 0;}
+.attend_all_v2 .attend_style_sep .attend_wrap {background: linear-gradient(to bottom, rgba(204, 68, 68, 0.4), rgba(17, 119, 136, 0.4));}
+.attend_all_v2 .attend_style_sep .attend_wrap .monthly {background: linear-gradient(to bottom, #945, #10718f);}
+.attend_all_v2 .attend_style_sep .attend_wrap .monthly .rate {background: none; box-shadow: none;}
+.attend_all_v2 .attend_style_sep .attend_wrap .monthly .rate .progress .value .days {color: #fcb;}
+.attend_all_v2 .attend_style_sep .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #fa8;}
+.attend_all_v2 .attend_style_sep .attend_wrap .monthly .att_stats li::before {border-color: rgba(255, 204, 187, 0.7);}
+.attend_all_v2 .attend_style_sep .attend_wrap .att_stats .stit {color: #fcb;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list > li {background: rgba(119, 34, 51, 0.4);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list > li .con .day {color: #fcb;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(255, 221, 221, 0.4);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.pass {border-color: #ffc699;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.ok {border-color: #623; border-bottom-color: #636; background: linear-gradient(to bottom, #623, #636);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: linear-gradient(to bottom, #410, #642400);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today::before {content:''; width: 100%; height: 100%; background: url(/images/attend/att_ptn_noise5.png) repeat; display: block; position: absolute; left: 0; top: 0;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_sep .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fe0;}
+
+/* attendance : attend_style_oct */
+.attend_all_v2 .attend_style_oct {background-color: #fff; background-image: url(/images/attend/att_bg_oct.jpg);}
+.attend_all_v2 .attend_style_oct .date .year .layer_years {background: rgba(119, 102, 187, 0.5); box-shadow: 0 24px 48px 0px rgba(0, 85, 170, 0.4);}
+.attend_all_v2 .attend_style_oct .date .year .layer_years .years {background-color: #796cb3;}
+.attend_all_v2 .attend_style_oct .date .year .layer_years ul {background: linear-gradient(to bottom, #796cb3, #58d);}
+.attend_all_v2 .attend_style_oct .date .year .layer_years li a {color: #fff; border-color: #fff;}
+.attend_all_v2 .attend_style_oct .date .year .layer_years li a:hover {color: #0fb; border-color: #164585; background: #164585;}
+.attend_all_v2 .attend_style_oct .date .year:hover .years {background-color: #796cb3;}
+.attend_all_v2 .attend_style_oct .date .month li a {color: #7eb4e0; border-top: 1px solid rgba(34, 119, 187, 0); background: rgba(34, 119, 187, 0.4);}
+.attend_all_v2 .attend_style_oct .date .month .att a {color: #e7e7ff; border-top-color: #538fd3; background: linear-gradient(to bottom, #2f71b5, #796cb3);}
+.attend_all_v2 .attend_style_oct .date .month .att a:hover {color: #fff; border-top-color: #538fd3; background: linear-gradient(to bottom, #64f, #64f);}
+.attend_all_v2 .attend_style_oct .date .month .on a, .attend_all_v2 .attend_style_oct .date .month .on a:hover {color: #fff; border-top-color: #49f; background: linear-gradient(to bottom, #49f, #6d7);}
+.attend_all_v2 .attend_style_oct .attend_wrap {background: linear-gradient(to bottom, rgba(71, 119, 170, 0.6), rgba(34, 68, 34, 0.6));}
+.attend_all_v2 .attend_style_oct .attend_wrap .monthly {background: rgba(17, 85, 136, 0.6);}
+.attend_all_v2 .attend_style_oct .attend_wrap .monthly .rate {background: linear-gradient(to right, #49f, #6d7); box-shadow: none;}
+.attend_all_v2 .attend_style_oct .attend_wrap .monthly .rate .progress .value .days {color: #cf7; font-weight: 400;}
+.attend_all_v2 .attend_style_oct .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #1aa0a0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .monthly .att_stats li::before {border-color: rgba(136, 255, 170, 0.5);}
+.attend_all_v2 .attend_style_oct .attend_wrap .att_stats .stit {color: #8fa;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list > li {background: rgba(255, 255, 255, 0.1);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list > li .con .day {color: #8fa;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(255, 255, 255, 0.3);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.pass {border-color: rgba(255, 238, 170, 0.3); border-top-color: #8fa; border-bottom-color: #fe0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.ok {border-color: #8fa; border-bottom-color: #fe0; background: linear-gradient(to bottom, #27b, #3181ca);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.ok::before {content:''; width: 100%; height: 100%; background: url(/images/attend/att_ptn_noise5.png) repeat; display: block; position: absolute; left: 0; top: 0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: #111 url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_oct .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #fe0;}
+
+/* attendance : attend_style_nov */
+.attend_all_v2 .attend_style_nov {background-color: #4d4a45; background-image: url(/images/attend/att_bg_nov.jpg);}
+.attend_all_v2 .attend_style_nov .date .year .layer_years {background: rgba(51, 51, 51, 0.5); box-shadow: 0 24px 48px 0px rgba(201, 183, 163, 0.4);}
+.attend_all_v2 .attend_style_nov .date .year .layer_years .years {background-color: #b9aea2;}
+.attend_all_v2 .attend_style_nov .date .year .layer_years ul {background: linear-gradient(to bottom, #b9aea2, #e9dfd5);}
+.attend_all_v2 .attend_style_nov .date .year .layer_years li a {color: #222; border-color: #222;}
+.attend_all_v2 .attend_style_nov .date .year .layer_years li a:hover {color: #db9; border-color: #222; background: #222;}
+.attend_all_v2 .attend_style_nov .date .year:hover .years {background-color: #b9aea2;}
+.attend_all_v2 .attend_style_nov .date .month li a {color: #aaa; font-weight: 400; border-top: 1px solid rgba(34, 119, 187, 0); background: rgba(34, 34, 34, 0.4);}
+.attend_all_v2 .attend_style_nov .date .month .att a {color: #fff; border-top-color: #9d9d9d; background: linear-gradient(to bottom, rgba(119, 119, 119, 0.8), rgba(170, 170, 170, 0.8));}
+.attend_all_v2 .attend_style_nov .date .month .att a:hover {color: #fff; border-top-color: #ccc; background: linear-gradient(to bottom, #777, #777);}
+.attend_all_v2 .attend_style_nov .date .month .on a, .attend_all_v2 .attend_style_nov .date .month .on a:hover {color: #222; font-weight: 500; border-top-color: #efdcc9; background: linear-gradient(to bottom, #ceb7a0, #ebe2d9);}
+.attend_all_v2 .attend_style_nov .attend_wrap {background: rgba(51, 51, 51, 0.8);}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly {background: rgba(34, 34, 34, 0.8) url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate {background: linear-gradient(to bottom, #ceb7a0, #ebe2d9); box-shadow: none;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .value .days {color: #cf7; font-weight: 400;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .value .num {color: #000;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .value .days {color: #777;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .value .days span {color: #444;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #444;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #c6b19c;}
+.attend_all_v2 .attend_style_nov .attend_wrap .monthly .att_stats li::before {border-color: rgba(170, 170, 170, 0.4);}
+.attend_all_v2 .attend_style_nov .attend_wrap .att_stats .stit {color: #aaa;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list > li {background: rgba(255, 255, 255, 0.1);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list > li .con .day {color: #db9;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(255, 255, 255, 0.15);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.pass {border-color: rgba(255, 255, 255, 0.2);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.ok {border-color: #000; background: #222 url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today {border-color: #fe0; background: #111 url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .day {color: #fe0;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #fe0;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .battle .stit .icon {background-image: url(/images/attend/att_ic_yl_battle.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .kill .stit .icon {background-image: url(/images/attend/att_ic_yl_kill.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .death .stit .icon {background-image: url(/images/attend/att_ic_yl_death.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .headshot .stit .icon {background-image: url(/images/attend/att_ic_yl_headshot.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .time .stit .icon {background-image: url(/images/attend/att_ic_yl_time.png);} 
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .txt {color: #fe0; background-color: rgba(255, 238, 0, 0); background-image: url(/images/attend/att_absence_yl.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .attend {color: #fff; background-image: none;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .attend font {color: #fe0;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .attend::before {background-image: url(/images/attend/att_att_bul.png), url(/images/attend/att_att_bg_yl.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .attend::after {background-image: url(/images/attend/att_att_cc_yl.png);}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #fe0;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #e99;}
+.attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_nov .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #fe0;}
+
+/* attendance : attend_style_dec */
+.attend_all_v2 .attend_style_dec {background-color: #fafcf9; background-image: url(/images/attend/att_bg_dec.jpg);}
+.attend_all_v2 .attend_style_dec .date .year .layer_years {background: rgba(153, 0, 0, 0.5);}
+.attend_all_v2 .attend_style_dec .date .year .layer_years .years {background-color: #c00;}
+.attend_all_v2 .attend_style_dec .date .year .layer_years ul {background: #c00;}
+.attend_all_v2 .attend_style_dec .date .year .layer_years li a {color: #f88; border: 1px solid #f88;}
+.attend_all_v2 .attend_style_dec .date .year .layer_years li a:hover {color: #3f0; border-color: #000;}
+.attend_all_v2 .attend_style_dec .date .year:hover .years {background-color: #c00;}
+.attend_all_v2 .attend_style_dec .date .month li a {color: #f66; border-top: 1px solid rgba(51, 0, 0, 0); background: rgba(51, 0, 0, 0.3);}
+.attend_all_v2 .attend_style_dec .date .month .att a {color: #faa; border-top-color: #f00; background: linear-gradient(to bottom, #900, #a00);}
+.attend_all_v2 .attend_style_dec .date .month .att a:hover {color: #fff; background: linear-gradient(to bottom, #500, #800);}
+.attend_all_v2 .attend_style_dec .date .month .on a, .attend_all_v2 .attend_style_dec .date .month .on a:hover {color: #3f0; border-top-color: #3f0; background: linear-gradient(to bottom, #d00, #c00);}
+.attend_all_v2 .attend_style_dec .attend_wrap {background: rgba(68, 0, 0, 0.7) url(/images/attend/att_ptn_noise5.png) repeat;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly {background: rgba(170, 0, 0, 0.7) url(/images/attend/att_bg_dec_stat.png) no-repeat 50% bottom;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate {background: linear-gradient(to bottom, #400, #700); box-shadow: none;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .value .days {color: #cf7; font-weight: 400;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .value .num {color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .value .days {color: #f33;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .value .days span {color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .circle_chart_circle {stroke: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .rate .progress .circle_chart_background {stroke: #800;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .att_stats {background: url(/images/attend/att_bg_dec_rate.png) repeat-x 50% top;}
+.attend_all_v2 .attend_style_dec .attend_wrap .monthly .att_stats li::before {border-color: #fc0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .att_stats .stit {color: #fc0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list > li {background: rgba(204, 0, 0, 0.25);}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list > li .con .day {color: #f66;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {border-color: rgba(153, 204, 255, 0.3);}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.pass {border-color: rgba(255, 51, 51, 0.4);}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.ok {border-color: #900; border-bottom-color: #2b0; background: #900;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.today {border: 1px solid #3f0; background: #000;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.today .con .day {color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.today .con .state .stit {color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li.today .con .state .att_stats li::before {border-color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li:first-child .con .day, .attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li:nth-child(7n+1) .con .day {color: #3f0;}
+.attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li:first-child.today .con .day, .attend_all_v2 .attend_style_dec .attend_wrap .cal_wrap .list li:nth-child(7n+1).today .con .day {color: #3f0;}
+
+/* attendance : default */
+.attend_style_jan, .attend_style_feb, .attend_style_mar, .attend_style_apr, .attend_style_may, .attend_style_jun, .attend_style_jul, .attend_style_aug, .attend_style_sep, .attend_style_oct, .attend_style_nov, .attend_style_dec {background-repeat: no-repeat; background-position: 50% 0; background-size: cover;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.bin {background: none;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.pass {background: none;}
+
+@media screen and (max-width: 1440px) {
+.attend_all_v2 .attend_wrap .monthly .rate {height: 220px;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart {width: 162px; height: 162px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats {padding-left: 18px; padding-right: 18px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li {padding: 0 6px;}
+.attend_all_v2 .attend_wrap .cal_wrap {padding: 14px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li {width: calc((100% / 7) - 8px); margin: 4px; padding-left: 10px; padding-right: 10px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats .num {padding-right: 0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today {padding-left: 9px; padding-right: 9px;}
+}
+	
+@media screen and (max-width: 1360px) {
+.attend_all_v2 h2 {padding: 0 0 6rem;}
+.attend_all_v2 .attend_wrap {display: block;}
+.attend_all_v2 .attend_wrap .monthly {width: 100%; max-width: 100%; background-image: none !important; display: table;}
+.attend_all_v2 .attend_wrap .monthly .rate, .attend_all_v2 .attend_wrap .monthly .att_stats {display: table-cell; vertical-align: middle;}
+.attend_all_v2 .attend_wrap .monthly .rate {width: 28.75%; height: 192px;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .num {font-size: 3.6rem; line-height: 3.6rem;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart {width: 144px; height: 144px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats {width: 71.25%; padding: 0 12px; text-align: left;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li {width: calc(50% - 24px); margin: 0 12px; display: inline-block; vertical-align: top;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li:nth-child(5)::before {opacity: 0;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li::before {width: 100%; height: 1px; border-left: none; border-right: none;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li > p {line-height: 60px; display: inline-block; vertical-align: top;}
+.attend_all_v2 .attend_wrap .cal_wrap {width: 100%;}
+
+.attend_style_jan, .attend_style_feb, .attend_style_mar, .attend_style_apr, .attend_style_may, .attend_style_jun, .attend_style_jul, .attend_style_aug, .attend_style_sep, .attend_style_oct, .attend_style_nov, .attend_style_dec {background-size: auto;}
+}
+
+@media screen and (max-width: 1120px) {
+.attend_all_v2 .attend_wrap .cal_wrap .list > li {width: calc((100% / 6) - 12px); margin: 6px;}
+}
+
+@media screen and (max-width: 1023px) {
+.attend_all_v2 .date .month {width: 100%; margin-bottom: 24px;}
+.attend_all_v2 .date .month li {width: calc(100% / 6); padding-bottom: 1px; display: inline-block;}
+.attend_all_v2 .date .month li:nth-child(6), .attend_all_v2 .date .month li:last-child {padding-right: 0;}
+.attend_all_v2 .date .month li a {padding: 42px 0 11px;}
+.attend_all_v2 .date .month li a::before {top: 13px;}
+.attend_all_v2 .attend_wrap .monthly {width: 100%; margin-bottom: -4px; display: block;}
+.attend_all_v2 .attend_wrap .monthly .rate, .attend_all_v2 .attend_wrap .monthly .att_stats {display: block; vertical-align: top;}
+.attend_all_v2 .attend_wrap .monthly .rate {width: 100%;}
+.attend_all_v2 .attend_wrap .monthly .att_stats {width: 100%; padding: 2.25rem 1.25rem 2.5rem;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li {width: calc(33.3% - 2.5rem); margin: 0 1.25rem; padding: 0;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li:nth-child(n+4):nth-child(-n+5) {margin-top: 1.15rem;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li:nth-child(5)::before {opacity: 1;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li::before {bottom: auto; top: 47%; transform: translate(0, -50%);}
+.attend_all_v2 .attend_wrap .monthly .att_stats li > p {width: 100%; height: 28px; padding: 0; line-height: 28px; display: block; text-align: center;}
+.attend_all_v2 .attend_wrap .monthly .att_stats .stit .icon {margin-top: 0; margin-right: 6px; position: relative; top: 2px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats .num {font-size: 1.4rem; height: 36px; line-height: 36px;}
+.attend_all_v2 .attend_wrap .cal_wrap {padding: 2.5rem;}
+.attend_all_v2 .attend_wrap .cal_wrap .list {display: block;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li {width: calc(100% - 3.8rem); min-height: 36px; margin: 12px 0 0 3.8rem; padding: 0 1.2rem;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .day {margin-bottom: 0; font-size: 1.4rem; letter-spacing: -0.02rem; position: absolute; left: -4rem; top: -2px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li {width: calc(33.3% - 2.4rem); margin: 0 1.2rem; padding: 0 1.2rem; line-height: 36px; display: inline-block; vertical-align: top;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li::before {opacity: 1;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li:nth-child(4)::before, .attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li:nth-child(5)::before {opacity: 0;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li > p {height: 36px; display: inline-block; vertical-align: top;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.bin {display: none;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today {padding-left: 1.1rem; padding-right: 1.1rem;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt {margin: 1.6rem 0.8rem; padding: 1.2rem 2.5rem 1.1rem; background-position: -50%;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt font {display: inline-block;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::before, .attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::after {display: none;}
+}
+
+@media screen and (max-width: 768px) {	
+/* attendance_old */
+.attend_all .cal_wrap .date { }
+.attend_all .cal_wrap .date ul {  font-size:4rem; }
+.attend_all .cal_wrap .date li { padding:0; }
+.attend_all .cal_wrap .date li.btn_prev, .attend_all .cal_wrap .date li.btn_next { top:-25px;  }
+.attend_all .cal_wrap .list li .con {height:68px;}
+.attend_all .cal_wrap .list li .con .day {font-size:2.3rem; height:25px; line-height:25px;}
+.attend_all .cal_wrap .list li .con .state { height:40px; }
+.attend_all .cal_wrap .list li .con .state:before { width:100%; height:100%;  background-size:60px auto !important; margin-left:-30px; top:20px;}
+.attend_all .cal_wrap .list li.pass .con .state:before, .attend_all .cal_wrap .list li.ok .con .state:before, .attend_all .cal_wrap .list li.today_ok .con .state:before  { width:40px; background-size:40px auto !important; margin-left:-20px; top:15px; }
+.attend_all .cal_wrap .list li.premium_pass .con .state:before, .attend_all .cal_wrap .list li.premium_ok .con .state:before,.attend_all .cal_wrap .list li.premium_today_ok .con .state:before   { width:100%;  background-size:100% auto !important; background-position:0 center; margin-left:-50%; top:0; }
+
+/* attendance_old (reset) */
+.attend_all_v2 .cal_wrap .list li .con {height: auto;}
+.attend_all_v2 .cal_wrap .list li .con .state {height: auto;}
+/* attendance_old (reset) */
+
+.attend_all_v2 h2 {margin-bottom: -34px;}
+.attend_all_v2 .date .year .years {height: 34px; padding: 0 36px 0 6px; font-size: 2.4rem; line-height: 34px; background-size: 24px;}
+.attend_all_v2 .date .year .layer_years {min-width: 180px; padding-top: 34px;}
+.attend_all_v2 .date .year .layer_years .years {padding-left: 12px;}
+.attend_all_v2 .date .year .layer_years .btn_close {width: 18px; height: 18px; background-size: cover; top: 8px; right: 9px;}
+.attend_all_v2 .date .year .layer_years ul {padding: 8px;}
+.attend_all_v2 .date .year .layer_years li {width: 74px; height: 30px; margin: 4px;}
+.attend_all_v2 .date .year .layer_years li a {font-size: 2.4rem; line-height: 30px;}
+.attend_all_v2 .date .year:hover .years {padding-left: 12px; background-color: #777;}
+.attend_all_v2 .date .month li a {font-size: 2.15rem;}
+.attend_all_v2 .attend_wrap .monthly .rate {height: 120px;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress {margin-top: 2px;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .num {font-size: 3.85rem; font-weight: 900;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .value .days {font-size: 2.15rem;}
+.attend_all_v2 .attend_wrap .monthly .rate .progress .circle_chart {width: 90px; height: 90px;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li::before {top: 50%;}
+.attend_all_v2 .attend_wrap .monthly .att_stats li > p {height: auto; padding: 0.8rem 0 0.6rem; font-size: 2.15rem; line-height: 2.6rem;}
+.attend_all_v2 .attend_wrap .monthly .att_stats .num {height: 28px; font-size: 2.5rem; line-height: 28px; font-weight: 500;}
+.attend_all_v2 .attend_wrap .monthly .att_stats .stit .icon {margin-right: 4px;}
+.attend_all_v2 .attend_wrap .att_stats .stit {font-size: 2.15rem;}
+.attend_all_v2 .attend_wrap .att_stats .num {font-size: 2.5rem;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt {font-size: 2.15rem;}
+}
+
+@media only screen and (max-width: 500px){
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .day {font-size: 2.4rem; top: -6px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li {width: calc(50% - 2.4rem);}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li:nth-child(4)::before {opacity: 1;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .txt {padding: 12.5rem 2.5rem 4rem; background-position: 50% 3.4rem;}
+.attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::before, .attend_all_v2 .attend_wrap .cal_wrap .list li.today .con .state .attend::after {display: block;}
+}
+
+@media screen and (max-width: 370px) {
+/* attendance_old */
+.attend_all .cal_wrap .list li.pass .con .state:before, .attend_all .cal_wrap .list li.ok .con .state:before, .attend_all .cal_wrap .list li.today_ok .con .state:before  { width:20px;  background-size:20px auto !important; margin-left:-10px; top:20px; }
+.attend_all .cal_wrap .list li.premium_pass .con .state:before, .attend_all .cal_wrap .list li.premium_ok .con .state:before, .attend_all .cal_wrap .list li.premium_today_ok .con .state:before  { width:100%; background-size:200% auto !important; background-position:center 0; margin-left:-50%; top:0; }
+.attend_all .cal_wrap .list li.pass .con {border:1px #dbdbdb solid; } 
+.attend_all .cal_wrap .list li.ok .con {border:1px #fcff00 solid; }
+
+/* attendance_old (reset) */
+.attend_all_v2 .cal_wrap .list li.pass .con .state:before, .attend_all .cal_wrap .list li.ok .con .state:before, .attend_all .cal_wrap .list li.today_ok .con .state:before {width: auto; margin-left: 0; background-size: auto !important; top: 0;}
+.attend_all_v2 .cal_wrap .list li.premium_pass .con .state:before, .attend_all .cal_wrap .list li.premium_ok .con .state:before, .attend_all .cal_wrap .list li.premium_today_ok .con .state:before {width: auto; margin-left: 0; background-size: auto !important; background-position: 0; top: 0;}
+.attend_all_v2 .cal_wrap .list li.pass .con {border: none;} 
+.attend_all_v2 .cal_wrap .list li.ok .con {border: none;}
+/* attendance_old (reset) */
+
+.attend_all_v2 .attend_wrap .monthly .att_stats li {width: calc(32% - 2.5rem);}
+.attend_all_v2 .attend_wrap .monthly .att_stats li:first-child, .attend_all_v2 .attend_wrap .monthly .att_stats li:nth-child(4) {width: calc(36% - 2.5rem);}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li {min-height: 30px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li {padding: 0 0.8rem; line-height: 31px;}
+.attend_all_v2 .attend_wrap .cal_wrap .list > li .con .state .att_stats li > p {height: 30px;}
+}
+
+@media screen and (max-width: 350px) {
+.attend_all_v2 .attend_wrap .att_stats .stit {width: 45%; padding: 0;}
+.attend_all_v2 .attend_wrap .att_stats .stit .icon {display: none;}
+.attend_all_v2 .attend_wrap .att_stats .num {width: 55%;}
+}
