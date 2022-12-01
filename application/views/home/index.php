@@ -171,8 +171,8 @@ fbq('track', 'PageView');
 				</nav>
 				<div class="login_box">
 					<ul>
-						<li class="signup"><a href="/member/signup">REGISTRASI</a></li>
-						<li class="login"><a href="/login/form">LOGIN</a></li>
+						<li class="signup"><a href="/signup">REGISTRASI</a></li>
+						<li class="login"><a href="/login">LOGIN</a></li>
 						
 					</ul>
 				</div>
