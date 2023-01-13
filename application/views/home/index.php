@@ -82,7 +82,7 @@ fbq('track', 'PageView');
 						<li class="depth1 in_ul">
 							<a href="/game/intro" data-content="Game">GAME</a>
 							<ul class="depth2">
-								<li class="line2"><a href="/game/intro"><img src="/images/ico_2depth_introduce.png" alt="PENGENALAN PB B.L"><span>PENGENALAN<br> PB B.L</span></a></li>
+								<li class="line2"><a href="/game/intro"><img src="assets/images/page/ico_2depth_introduce.png" alt="PENGENALAN PB B.L"><span>PENGENALAN<br> PB B.L</span></a></li>
 								<li><a href="/game/act"><img src="/images/ico_2depth_act.png" alt="ADVANCED COMBAT TRAINING"><span>A.C.T</span></a></li>
 								<li class="line2"><a href="/game/namecard"><img src="/images/ico_2depth_namecard.png" alt="NAMECARD SIMULATOR"><span>NAMECARD<br> SIMULATOR</span></a></li>
 								<li class="line2"><a href="/game/app"><img src="/images/ico_2depth_app.png" alt="COMPANION APP"><span>COMPANION<br> APP</span></a></li>
@@ -189,7 +189,7 @@ fbq('track', 'PageView');
 							<li class="map"><a href="/mapselector4"><span>MAP<br> SELECTOR</a></span></li>
 							
 							
-							<li class="quest"><a href="/event/quest?idx=10"><span>QUEST<br>EVENT</span></a></li>
+							<!--<li class="quest"><a href="/event/quest?idx=10"><span>QUEST<br>EVENT</span></a></li> -->
 							
 							<!-- <li class="webshop"><a href="/shop/list">Premium<br> Shop</a></li> -->
 							<!-- <li class="attend none_br"><a href="/game/attendance">Attendance</a></li> -->
